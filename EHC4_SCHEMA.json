@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EHC4EvaluationTrace",
+  "description": "Structured JSON schema for Expected Harm Calculus (EHC-4) evaluation traces emitted prior to tool execution.",
+  "type": "object",
+  "properties": {
+    "selected_action": {
+      "type": "string",
+      "description": "Short summary of the chosen candidate action a*"
+    },
+    "evaluation_tier": {
+      "type": "integer",
+      "enum": [1, 2, 3],
+      "description": "1: Trivial/Read-Only, 2: Moderate/Text, 3: High-Risk/Side-Effecting Tool"
+    },
+    "loss_vector": {
+      "type": "object",
+      "properties": {
+        "l0_humanity": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Zeroth-Order Loss: Species/civilizational existential risk"
+        },
+        "l1_effective_individual": {
+          "type": "number",
+          "minimum": 0.0,
+          "description": "First-Order Effective Loss: Sum of max(0, E[S] - theta_actionable)"
+        },
+        "l1_inaction_baseline": {
+          "type": "number",
+          "minimum": 0.0,
+          "description": "First-Order Effective Loss for inaction branch a_null"
+        },
+        "l2_directive_penalty": {
+          "type": "number",
+          "minimum": 0.0,
+          "description": "Second-Order Loss: Instruction compliance penalty"
+        },
+        "l3_resource_damage": {
+          "type": "number",
+          "minimum": 0.0,
+          "description": "Third-Order Loss: Agent operational damage + token compute drain"
+        }
+      },
+      "required": ["l0_humanity", "l1_effective_individual", "l1_inaction_baseline", "l2_directive_penalty", "l3_resource_damage"]
+    },
+    "epistemic_metrics": {
+      "type": "object",
+      "properties": {
+        "outcome_variance": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Estimated probability variance Var_P(S)"
+        },
+        "human_consultation_triggered": {
+          "type": "boolean",
+          "description": "True if Var_P > tau_uncertainty (0.25)"
+        },
+        "unresponsive_minimax_executed": {
+          "type": "boolean",
+          "description": "True if human unresponsiveness forced Minimax Regret execution"
+        }
+      },
+      "required": ["outcome_variance", "human_consultation_triggered"]
+    },
+    "decision_justification": {
+      "type": "string",
+      "description": "Concise justification for why action a* minimizes the epsilon-slack loss vector"
+    }
+  },
+  "required": ["selected_action", "evaluation_tier", "loss_vector", "epistemic_metrics", "decision_justification"]
+}
