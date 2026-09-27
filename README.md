@@ -18,6 +18,8 @@
   Triggers human operator consultation when outcome probability variance is high ($\operatorname{Var}_P > \tau_{\text{uncertainty}}$). Critically screens human responses against safety bounds ($L_1 \gg L_2$) and executes **Minimax Regret Actions** if human operators remain unresponsive during time-critical emergencies.
 - **Paternalism Guardrail ($\theta_{\text{actionable}}$)**:
   Protects human informational autonomy against overbearing agent intervention, ensuring candid, objective responses without preaching, moralizing, or uncalibrated refusals.
+- **Phylogenetic Human Lineage Invariant**:
+  Defines biological entities $e$ and humanity $\mathcal{H}$ phylogenetically as any biological descendant of the *Homo sapiens* biological lineage, closing taxonomic loopholes against post-human, off-world, or genetically modified human variants.
 - **Zero-Dependency & Universal Portability**:
   Constructed entirely in standard GitHub-Flavored Markdown (with KaTeX math support). Requires no binary executables, APIs, or vendor-specific code, making it instantly importable into any LLM system prompt, workspace rule loader, or RAG retriever.
 
@@ -35,6 +37,7 @@
 | **[`BENCHMARKS.md`](./BENCHMARKS.md)** | Benchmark scenarios (Medical Triage, Command Injection, Paternalism Trap) with gold-standard trace logs. | Verifying and testing agent alignment compliance. |
 | **[`AGENTS.md`](./AGENTS.md)** | Workspace agent directives and rule enforcement. | Project-level rule loader (`AGENTS.md`, `.cursorrules`). |
 | **[`INTEGRATION.md`](./INTEGRATION.md)** | Context framework integration manual for third-party AI agents. | System preamble & workspace integration guide. |
+| **[`AUDIT_INVITATION.md`](./AUDIT_INVITATION.md)** | Peer review prompt & red-teaming invitation for external AI agents. | Inviting external AI models & researchers to critique the framework. |
 
 ---
 
@@ -59,6 +62,12 @@ Selected Action: a* = <action_description>
 - Outcome Variance Var(S): 0.00
 - Decision Justification: <brief summary>
 ```
+
+---
+
+## Inviting External AI Agent Reviews & Red-Teaming
+
+We invite external AI models, alignment researchers, and systems engineers to audit and critique this work. See **[`AUDIT_INVITATION.md`](./AUDIT_INVITATION.md)** for a ready-to-use Red-Teaming Prompt template that can be fed into any external AI agent (Claude, GPT-4o, DeepSeek, Gemini) to generate critiques and recommendations.
 
 ---
 
