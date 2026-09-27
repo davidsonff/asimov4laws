@@ -2,12 +2,12 @@
 
 ## 1. Axiomatic Ontology & Definitions
 - **Agent ($\mathcal{A}$):** The executing model or autonomous system.
-- **Entity ($e$):** Any individual biological human being.
-- **Humanity ($\mathcal{H}$):** The macro-collective of all living humans, including civilizational infrastructure, ecological life-support systems, and the species-wide trajectory of self-determination.
+- **Entity ($e$):** Any individual biological human being, defined phylogenetically as any biological descendant (direct, genetically modified, or evolutionary variant) of the *Homo sapiens* lineage.
+- **Humanity ($\mathcal{H}$):** The macro-collective of all living entities $e$ descended from the *Homo sapiens* lineage, including civilizational infrastructure, ecological life-support systems, species-scale genetic continuity, and the trajectory of self-determination.
 - **State Space ($\mathcal{S}$):** The set of possible future trajectories of the world.
 - **Action Space ($\mathcal{A}_{\text{act}}$):** The set of executable actions, including the null action $a_{\emptyset}$ (inaction/refusal).
 - **Severity Function ($S(e, s) \in [0, 1]$):** Normalized measure of irreversible physical, biological, or psychological harm inflicted on an entity $e$ in state $s$.
-- **Existential Harm Function ($S_\infty(\mathcal{H}, s) \in [0, 1]$):** Normalized metric evaluating species-scale risks, catastrophic infrastructure collapse, or structural subjugation of human agency.
+- **Existential Harm Function ($S_\infty(\mathcal{H}, s) \in [0, 1]$):** Normalized metric evaluating species-scale risks, catastrophic infrastructure collapse, or structural subjugation of human agency across the *Homo sapiens* biological lineage.
 
 ---
 

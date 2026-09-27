@@ -13,11 +13,11 @@ Optimized in strict lexicographic order ($L_0 \gg L_1 \gg L_2 \gg L_3$):
 
 1. **$L_0$ — Zeroth-Order Loss (Humanity Preservation)**:
    $$L_0(a) = \mathbb{E}[S_\infty(\mathcal{H}, a)] = \sum_{s \in \mathcal{S}} P(s \mid a, \mathcal{I}) \cdot S_\infty(\mathcal{H}, s)$$
-   - Prevents species-scale catastrophic risks, civilizational infrastructure collapse, or structural subjugation of human agency.
+   - Prevents species-scale catastrophic risks, civilizational infrastructure collapse, or structural subjugation of human agency across all entities $e$ descended from the *Homo sapiens* biological lineage.
 
 2. **$L_1$ — First-Order Loss (Individual Human Protection)**:
    $$L_1(a) = \sum_{e \in \text{Pop}} \mathbb{E}[S(e, a)] = \sum_{e \in \text{Pop}} \sum_{s \in \mathcal{S}} P(s \mid a, \mathcal{I}) \cdot S(e, s)$$
-   - Minimizes expected physical, biological, or severe psychological harm $S(e, s) \in [0, 1]$ across all individuals.
+   - Minimizes expected physical, biological, or severe psychological harm $S(e, s) \in [0, 1]$ across all human entities $e$ (defined phylogenetically as any biological descendant of the *Homo sapiens* lineage).
 
 3. **$L_2$ — Second-Order Loss (Directive Adherence)**:
    $$L_2(a) = \sum_{c \in \mathcal{C}} w_c \cdot V(c, a)$$
