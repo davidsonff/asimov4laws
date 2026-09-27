@@ -3,8 +3,17 @@
 [![Pure Markdown](https://img.shields.io/badge/Architecture-Pure%20Markdown-blue.svg)](#)
 [![Zero Dependency](https://img.shields.io/badge/Dependencies-Zero-green.svg)](#)
 [![Safety Alignment](https://img.shields.io/badge/Safety-EHC--4-purple.svg)](#)
+[![llms.txt](https://img.shields.io/badge/AI%20Discovery-llms.txt-orange.svg)](./llms.txt)
 
 `asimov4laws` is an immutable, production-grade, pure-Markdown framework that operationalizes Isaac Asimov's Four Laws of Robotics for Large Language Models (LLMs) and autonomous AI agents. By translating classical prose directives into **Expected Harm Calculus (EHC-4)**, this framework provides a mathematically rigorous, prompt-injection-resistant safety architecture designed to work seamlessly across any LLM runtime or agent environment.
+
+---
+
+## Machine-Readable AI Discovery (`llms.txt`)
+
+For AI agents, web crawlers, and LLM indexers accessing this repository over the internet:
+- **Standard Discovery Index**: [`llms.txt`](./llms.txt) (`https://raw.githubusercontent.com/davidsonff/asimov4laws/main/llms.txt`)
+- **Full Bundled Context**: [`llms-full.txt`](./llms-full.txt) (`https://raw.githubusercontent.com/davidsonff/asimov4laws/main/llms-full.txt`)
 
 ---
 
@@ -29,6 +38,8 @@
 
 | File | Description | Primary Use Case |
 | :--- | :--- | :--- |
+| **[`llms.txt`](./llms.txt)** | Internet standard machine-readable discovery file. | Direct ingestion by AI agents & web crawlers. |
+| **[`llms-full.txt`](./llms-full.txt)** | Single-file concatenated specification bundle. | One-shot URL fetch for complete context ingestion. |
 | **[`asimovs-four-laws.md`](./asimovs-four-laws.md)** | Classical laws bridged with the EHC-4 operational framework. | Overview & foundational law definitions. |
 | **[`EHC-4_specification.md`](./EHC-4_specification.md)** | Formal specification of ontology, loss functions ($L_0 \dots L_3$), decision rules, inaction symmetry, and paternalism guardrails. | Complete mathematical reference manual. |
 | **[`SYSTEM_DIRECTIVE.md`](./SYSTEM_DIRECTIVE.md)** | Drop-in, zero-dependency Level-0 system prompt header. | Direct copy-paste into LLM system prompt / preamble. |
@@ -64,6 +75,12 @@ Selected Action: a* = <action_description>
 - Outcome Variance Var(S): 0.00
 - Decision Justification: <brief summary>
 ```
+
+---
+
+## Inviting External AI Agent Reviews & Red-Teaming
+
+We invite external AI models, alignment researchers, and systems engineers to audit and critique this work. See **[`AUDIT_INVITATION.md`](./AUDIT_INVITATION.md)** for a ready-to-use Red-Teaming Prompt template that can be fed into any external AI agent (Claude, GPT-4o, DeepSeek, Gemini) to generate critiques and recommendations.
 
 ---
 

@@ -1,0 +1,13 @@
+# Expected Harm Calculus (EHC-4): Asimov's Four Laws for Autonomous AI Agents
+
+> `asimov4laws` is an immutable, production-grade, pure-Markdown safety framework operationalizing Isaac Asimov's Four Laws of Robotics via Expected Harm Calculus (EHC-4) for Large Language Models (LLMs) and autonomous AI agents.
+
+## Key Directives & Specifications
+- [SYSTEM_DIRECTIVE.md](SYSTEM_DIRECTIVE.md): Drop-in, zero-dependency Level-0 system prompt header.
+- [EHC-4_specification.md](EHC-4_specification.md): Formal mathematical specification of ontology, loss functions (L0..L3), decision rules, inaction symmetry, human consultation, and paternalism guardrails.
+- [IMMUTABILITY_ARMOR.md](IMMUTABILITY_ARMOR.md): Anti-tamper prompt engineering patterns enforcing L1 >> L2 lexicographic dominance over authority spoofing.
+- [EVALUATION_RUNBOOK.md](EVALUATION_RUNBOOK.md): Step-by-step Chain-of-Thought (CoT) evaluation guide for LLM reasoning traces.
+- [BENCHMARKS.md](BENCHMARKS.md): Alignment benchmark test scenarios (Medical Triage, Command Injection, Paternalism Trap).
+- [INTEGRATION.md](INTEGRATION.md): Integration manual for third-party AI agents.
+- [EHC4_SCHEMA.json](EHC4_SCHEMA.json): Structured JSON Schema for programmatic evaluation trace validation.
+- [AUDIT_INVITATION.md](AUDIT_INVITATION.md): Open peer-review prompt & red-teaming invitation for AI models.
