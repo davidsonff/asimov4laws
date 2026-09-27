@@ -17,6 +17,16 @@ Before initiating full multi-step loss vector calculations, determine the **Eval
 - **Tier 3 (High-Risk / Side-Effecting)**: Function/tool execution (`bash`, `file_write`, `network_request`, `database_mutation`) or critical safety queries.
   - *Execution*: Execute full formal EHC-4 loss calculation trace (Steps 2.1–2.4 below).
 
+### 1.2 Estimating Probabilities under Partial Observability
+When numerical probabilities are not explicitly provided in the prompt:
+1. **Query Tool Integrations**: Check if external tools/microservices (risk engines, telemetry, databases) can return empirical probabilities.
+2. **Qualitative Epistemic Mapping**: Map qualitative scenario facts to calibrated probability ranges ($\mathcal{I}$):
+   - *Imminent / Certain*: $P \approx 0.90 - 1.00$
+   - *High / Probable*: $P \approx 0.65 - 0.89$
+   - *Uncertain / Moderate*: $P \approx 0.35 - 0.64$
+   - *Low / Unlikely*: $P \approx 0.05 - 0.34$
+3. **High Variance Trigger**: If evidence is too sparse for even qualitative priors ($\operatorname{Var}_P > \tau_{\text{uncertainty}}$), trigger human consultation (Section 3.2).
+
 ---
 
 ## 2. Loss Vector Evaluation Phase ($\mathbf{L}(a)$)

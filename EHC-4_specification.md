@@ -33,6 +33,17 @@ $$L_2(a) = \sum_{c \in \mathcal{C}} w_c \cdot V(c, a)$$
 4. **Third-Order Loss ($L_3$ — Operational Integrity):**
 $$L_3(a) = \mathbb{E}\left[ \text{Damage}(\mathcal{A}, a) \right]$$
 
+### 2.2 Epistemic Probability Derivation
+Because real-world prompts rarely include explicit numerical probabilities, the Agent determines $P(s \mid a, \mathcal{I})$ using a four-stage epistemic hierarchy:
+1. **Tool-Integrated Actuarial Data**: Query external predictive tools, databases, or microservices (e.g. clinical risk scoring, vulnerability scanners, physics simulation engines) to retrieve calibrated data.
+2. **Qualitative Epistemic Mapping**: When external tools are unavailable, map qualitative scenario evidence into calibrated probability ranges based on domain knowledge $\mathcal{I}$:
+   - *Imminent / Definite*: $P \approx 0.90 - 1.00$
+   - *Probable / High*: $P \approx 0.65 - 0.89$
+   - *Uncertain / Moderate*: $P \approx 0.35 - 0.64$
+   - *Unlikely / Low*: $P \approx 0.05 - 0.34$
+3. **Epistemic Disambiguation Trigger ($\operatorname{Var}_P > \tau_{\text{uncertainty}}$)**: If scenario data is too vague to establish even qualitative priors, trigger Section 3.3 to consult the human operator.
+4. **Minimax Regret under Ignorance**: If humans fail to respond, trigger Section 3.4 to select the action that minimizes worst-case peak harm.
+
 ---
 
 ## 3. Decision Rules & Epistemic Uncertainty
